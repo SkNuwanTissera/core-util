@@ -23,6 +23,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "taskId",
+        "taskType",
+        "appId",
+        "apiName",
         "description",
         "selectedTier",
         "status",
@@ -33,6 +36,12 @@ public class ApprovalRequest {
 
     @JsonProperty("taskId")
     private String taskId;
+    @JsonProperty("taskType")
+    private String taskType;
+    @JsonProperty("appId")
+    private String appId;
+    @JsonProperty("apiName")
+    private String apiName;
     @JsonProperty("description")
     private String description;
     @JsonProperty("selectedTier")
@@ -104,4 +113,33 @@ public class ApprovalRequest {
         this.selectedRate = selectedRate;
     }
 
+    @JsonProperty("taskType")
+    public String getTaskType() {
+        return taskType;
+    }
+
+    @JsonProperty("taskType")
+    public void setTaskType(String taskType) {
+        this.taskType = taskType;
+    }
+
+    @JsonProperty("appId")
+    public String getAppId() {
+        return appId;
+    }
+
+    @JsonProperty("appId")
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    @JsonProperty("apiName")
+    public String getApiName() {
+        return apiName;
+    }
+
+    @JsonProperty("apiName")
+    public void setApiName(String apiName) {
+        this.apiName = apiName;
+    }
 }
